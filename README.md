@@ -6,7 +6,7 @@ Hex is a modal editor similar to vi. It operates in a normal mode (where keystro
 
 ## Installation
 
-    make install
+    $ make install
 
 That's it!
 
