@@ -1,0 +1,24 @@
+cli.o: cli.cpp cli.h editor.h file.h subject.h observer.h file_view.h \
+  view.h window.h config.h cmd_line_view.h
+cmd_line_view.o: cmd_line_view.cpp cmd_line_view.h view.h window.h \
+  observer.h file.h subject.h
+cmd_mode.o: cmd_mode.cpp cmd_mode.h editor.h file.h subject.h observer.h \
+  file_view.h view.h window.h config.h cmd_line_view.h mode.h
+config.o: config.cpp config.h
+editor.o: editor.cpp editor.h file.h subject.h observer.h file_view.h \
+  view.h window.h config.h cmd_line_view.h cmd_mode.h mode.h \
+  normal_mode.h insert_mode.h
+file.o: file.cpp file.h subject.h observer.h
+file_view.o: file_view.cpp file_view.h view.h window.h observer.h file.h \
+  subject.h config.h
+insert_mode.o: insert_mode.cpp insert_mode.h mode.h editor.h file.h \
+  subject.h observer.h file_view.h view.h window.h config.h \
+  cmd_line_view.h
+main.o: main.cpp cli.h
+mode.o: mode.cpp mode.h
+normal_mode.o: normal_mode.cpp normal_mode.h mode.h editor.h file.h \
+  subject.h observer.h file_view.h view.h window.h config.h \
+  cmd_line_view.h
+subject.o: subject.cpp subject.h observer.h
+view.o: view.cpp view.h window.h observer.h file.h subject.h
+window.o: window.cpp window.h
